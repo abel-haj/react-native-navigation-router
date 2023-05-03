@@ -11,17 +11,17 @@ To get started with this project, you'll need to have [Node.js](https://nodejs.o
 1.  Clone this repository:
     
     
-    `git clone https://github.com/your-username/react-navigation-router.git`
+    `git clone https://github.com/abel-haj/react-native-navigation-router.git`
     
 2.  Install dependencies:
     
     
-    `cd react-navigation-router npm install`
+    `cd react-native-navigation-router; npm install`
     
 3.  Start the Expo development server:
     
     
-    `npm start`
+    `npx expo start`
     
 4.  Scan the QR code with the Expo app on your mobile device or run the app on a simulator or emulator.
     
@@ -45,4 +45,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 License
 -------
 
-This project is licensed under the [MIT License](https://github.com/your-username/react-navigation-router/blob/main/LICENSE).
+This project is licensed under the [GNU GENERAL PUBLIC License](https://github.com/abel-haj/react-native-navigation-router/blob/main/LICENSE).
