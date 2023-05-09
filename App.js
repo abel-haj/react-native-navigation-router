@@ -10,7 +10,25 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
+// create a bottom tab navigator
+// that will contain all the main screens
+// that we want to display in the bottom nav bar
 const Tab = createBottomTabNavigator();
+// create a stack navigator
+// that will contain screens
+// that could be nested inside a tab screen
+/**
+ * Example:
+ * 
+ * Home
+ * - Stack: [First Nested Page, Second Nested Page]
+ * Search
+ * - No nested stack
+ * Settings
+ * - No nested stack
+ * Profile
+ * - No nested stack
+ **/
 const stack = createStackNavigator();
 
 function HomeStack() {
@@ -23,6 +41,8 @@ function HomeStack() {
   );
 }
 
+// seperating the tabs from the App function
+// to make it more readable
 const myTabs = [
   {
     name: 'HomeStack',
@@ -45,8 +65,12 @@ const myTabs = [
     component: ProfileScreen,
   },
 ]
+
+// Same options for both approaches
 const screenOptions = { headerShown: false, tabBarActiveTintColor: '#309975', tabBarInactiveTintColor: '#454d66', tabBarStyle: {}, }
 
+// First approach
+// Simple bottom nav bar
 function App() {
   return (
     <NavigationContainer>
@@ -66,6 +90,10 @@ function App() {
   );
 }
 
+// Second approach
+// Custom bottom nav bar:
+//    The entire bottom nav could be reimplmented
+//    with our own design
 function CustomApp() {
   return (
     <NavigationContainer>
