@@ -45,7 +45,7 @@ function HomeStack() {
 // to make it more readable
 const myTabs = [
   {
-    name: 'HomeStack',
+    name: 'Home',
     icon: 'home',
     component: HomeStack,
   },
