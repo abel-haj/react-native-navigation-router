@@ -15,9 +15,10 @@ const stack = createStackNavigator();
 
 function HomeStack() {
   return (
-    <stack.Navigator>
-      <stack.Screen name="Home" component={HomeScreen} />
-      <stack.Screen name="Stack" component={StackScreen} />
+    <stack.Navigator screenOptions={screenOptions}>
+      <stack.Screen name="Homepage" component={HomeScreen} />
+      {/* show header to display a back button in-app */}
+      <stack.Screen options={{ headerShown: true, }} name="Stack" component={StackScreen} />
     </stack.Navigator>
   );
 }

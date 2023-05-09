@@ -9,7 +9,7 @@ export default function StackScreen({ navigation }) {
       <Text>Welcome!</Text>
       <Text>This is another screen, inside the home stack</Text>
       <StatusBar style="auto" />
-      <Button title="Go Back" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go Back" onPress={() => navigation.navigate('Homepage')} />
     </View>
   );
 }
