@@ -120,29 +120,16 @@ function CustomApp() {
                     target: route.key,
                     canPreventDefault: true,
                   });
-
                   if (!isFocused && !event.defaultPrevented) {
-                    // The `merge: true` option makes sure that the params inside the tab screen are preserved
-                    props.navigation.navigate({ name: route.name, merge: true });
+                    props.navigation.navigate(route.name);
                   }
-                };
-
-                const onLongPress = () => {
-                  props.navigation.emit({
-                    type: 'tabLongPress',
-                    target: route.key,
-                  });
                 };
 
                 return (
                   <TouchableOpacity
                     key={index}
-                    accessibilityRole="button"
-                    accessibilityState={isFocused ? { selected: true } : {}}
-                    accessibilityLabel={options.tabBarAccessibilityLabel}
                     testID={options.tabBarTestID}
                     onPress={onPress}
-                    onLongPress={onLongPress}
                     style={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: 10, }}
                   >
                     <MaterialCommunityIcons
