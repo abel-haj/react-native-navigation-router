@@ -143,7 +143,8 @@ function CustomApp() {
   );
 }
 
-export default App;
+// export default App;
+export default CustomApp;
 
 // create stylesheet
 const styles = StyleSheet.create({
