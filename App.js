@@ -56,7 +56,7 @@ function App() {
         sceneContainerStyle={{}}
       >
         {myTabs.map((tab, index) => (
-          <Tab.Screen key={index} name={tab.name} component={tab.component}
+          <Tab.Screen key={'bottom_tab_' + index} name={tab.name} component={tab.component}
             options={{
               tabBarIcon: ({ color }) => (<MaterialCommunityIcons name={tab.icon} color={color} size={26} />),
             }} />
@@ -136,10 +136,7 @@ function CustomApp() {
         }
       >
         {myTabs.map((tab, index) => (
-          <Tab.Screen key={index} name={tab.name} component={tab.component}
-            options={{
-              tabBarIcon: ({ color }) => (<MaterialCommunityIcons name={tab.icon} color={color} size={26} />),
-            }} />
+          <Tab.Screen key={'bottom_tab2_' + index} name={tab.name} component={tab.component} />
         ))}
       </Tab.Navigator>
     </NavigationContainer>
